@@ -46,7 +46,7 @@ provider "aws" {
 }
 ```
 
-AWS configurations passed in provider blocks can be passed further to the modules. \
+AWS configurations passed in provider blocks can be passed further to the modules.
 
 In the module where terraform init will be run create a directory mod-vpc and inside mod-vpc create a main.tf file with this configuration. \
 _Terraform and required_providers block must be added, see the note from this [LINK](https://www.terraform.io/docs/language/modules/develop/providers.html#implicit-provider-inheritance).
@@ -85,7 +85,7 @@ module "vpc_web_west2" {
 ```
 
 # How to use this repo
-It is assumed that credentials/API keys to manage AWS are configured for your environment. For more details check this [LINK](https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1). \
+It is assumed that credentials/API keys to manage AWS are configured for your environment. For more details check this [LINK](https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1).
 
 Clone the repository and cd into the newly downloaded repo:
 ```
