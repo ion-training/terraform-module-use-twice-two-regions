@@ -1,5 +1,5 @@
 # terraform-module-use-twice-two-regions
-This repository shows a simple example of a module that is used twice.
+This repository shows a simple example of a module that is used twice. \ 
 The root module (where terraform apply is used) invokes mod-vpc module twice to create a resource in 2 regions with AWS provider.
 
 
@@ -18,7 +18,7 @@ terraform {
 }
 ```
 
-The providers can be configured using the provider block.
+The providers can be configured using the provider block. \ 
 In this example the region configuration is passed to the provider.
 
 ```
@@ -27,9 +27,9 @@ provider "aws" {
 }
 ```
 
-What if we need to configure same provider with different configurations. For example eu-west-1 and eu-west-2?
-We can specify the same provider block (provider "aws" { } ) two times by passing two different sets of configuration (region="eu-west-1" / region="eu-west-2") and the "alias" argument.
-"alias" keyword lets terraform differentiate between these two provider blocks that embed different configurations.
+What if we need to configure same provider with different configurations. For example eu-west-1 and eu-west-2? \ 
+We can specify the same provider block (provider "aws" { } ) two times by passing two different sets of configuration (region="eu-west-1" / region="eu-west-2") and the "alias" argument. \ 
+"alias" keyword lets terraform differentiate between these two provider blocks that embed different configurations. \
 
 Example configuring aws provider with eu-west-1 and eu-west-2:
 ```
@@ -44,9 +44,9 @@ provider "aws" {
 }
 ```
 
-AWS configurations passed in provider blocks can be passed further to the modules.
+AWS configurations passed in provider blocks can be passed further to the modules. \
 
-In the module where terraform init will be run create a directory mod-vpc and inside mod-vpc create a main.tf file with this configuration.
+In the module where terraform init will be run create a directory mod-vpc and inside mod-vpc create a main.tf file with this configuration. \
 _Terraform and required_providers block must be added, see the note from this [LINK](https://www.terraform.io/docs/language/modules/develop/providers.html#implicit-provider-inheritance).
 ```
 terraform {
@@ -63,8 +63,8 @@ resource "aws_vpc" "web_vpc" {
 }
 ```
 
-In the root directory (where terraform init is run) add in main.tf load the module two times.
-Make sure add in each module block the providers configured in previous steps.
+In the root directory (where terraform init is run) add in main.tf load the module two times. \ 
+Make sure add in each module block the providers configured in previous steps. \ 
 _Modules were explicitly added the provider to be used._
 ```
 module "vpc_web_west1" {
@@ -83,7 +83,7 @@ module "vpc_web_west2" {
 ```
 
 # How to use this repo
-It is assumed that credentials/API keys to manage AWS are configured for your environment. For more details check this [LINK](https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1)
+It is assumed that credentials/API keys to manage AWS are configured for your environment. For more details check this [LINK](https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1). \ 
 
 Clone the repository and cd into the newly downloaded repo:
 ```
