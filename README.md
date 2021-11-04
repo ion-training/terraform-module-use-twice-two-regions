@@ -27,7 +27,9 @@ provider "aws" {
 }
 ```
 
-What if we need to configure same provider with different configurations. For example eu-west-1 and eu-west-2? \
+What if we need to configure same provider with different configurations.\
+For example eu-west-1 and eu-west-2? \
+
 We can specify the same provider block (provider "aws" { } ) two times by passing two different sets of configuration (region="eu-west-1" / region="eu-west-2") and the "alias" argument. \
 "alias" keyword lets terraform differentiate between these two provider blocks that embed different configurations. \
 
