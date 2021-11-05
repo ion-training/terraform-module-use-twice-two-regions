@@ -2,8 +2,7 @@
 This repository shows a simple example of a module that is used twice. \
 The root module (where terraform apply is used) invokes mod-vpc module twice to create a resource in 2 regions with AWS provider.
 
-
-# How to use this repo
+# Prepare AWS API keys
 Install AWS CLI, see [LINK](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 ```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -28,6 +27,8 @@ export AWS_ACCESS_KEY_ID=ASIAT_TOKEN
 export AWS_SECRET_ACCESS_KEY=...TOKEN
 export AWS_SESSION_TOKEN=...TOKEN
 ```
+
+# How to use this repo
 
 Clone the repository and cd into the newly downloaded repo:
 ```
