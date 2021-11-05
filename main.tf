@@ -6,11 +6,19 @@ terraform {
     }
   }
 }
+
+# default
+provider "aws" {
+  region = "eu-west-1"
+}
+
+# west-1
 provider "aws" {
   region = "eu-west-1"
   alias  = "west-1"
 }
 
+# west-2
 provider "aws" {
   region = "eu-west-2"
   alias  = "west-2"
