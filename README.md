@@ -4,7 +4,19 @@ The root module (where terraform apply is used) invokes mod-vpc module twice to 
 
 
 # How to use this repo
-It is assumed that credentials/API keys to manage AWS are configured for your environment. For more details check this [LINK](https://blog.gruntwork.io/a-comprehensive-guide-to-managing-secrets-in-your-terraform-code-1d586955ace1).
+Install AWS CLI, see [LINK](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+Configure AWS CLI, see [LINK](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+```
+aws configure
+AWS Access Key ID [None]: AKIA_EXAMPLE
+AWS Secret Access Key [None]: TOKEN
+```
 
 Clone the repository and cd into the newly downloaded repo:
 ```
