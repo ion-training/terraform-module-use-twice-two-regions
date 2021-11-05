@@ -7,7 +7,11 @@ The root module (where terraform apply is used) invokes mod-vpc module twice to 
 Install AWS CLI, see [LINK](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 ```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+```
+```
 unzip awscliv2.zip
+```
+```
 sudo ./aws/install
 ```
 
@@ -16,6 +20,13 @@ Configure AWS CLI, see [LINK](https://docs.aws.amazon.com/cli/latest/userguide/c
 aws configure
 AWS Access Key ID [None]: AKIA_EXAMPLE
 AWS Secret Access Key [None]: TOKEN
+```
+
+OR, add API keys as environment variables
+```
+export AWS_ACCESS_KEY_ID=ASIAT_TOKEN
+export AWS_SECRET_ACCESS_KEY=...TOKEN
+export AWS_SESSION_TOKEN=...TOKEN
 ```
 
 Clone the repository and cd into the newly downloaded repo:
